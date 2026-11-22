@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balloon Bliss — Party Balloons &amp; Birthday Decor</title>
+<meta name="description" content="Birthday, foil, helium aur bouquet balloons — har khushi ko rang do. Order on WhatsApp.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --pink:#ff5e8a; --purple:#a855f7; --blue:#3b82f6; --gold:#f5b301;
+  --ink:#22103a; --ink2:#5d5470; --bg:#fff7fb; --card:#fff;
+  --line:#f3d9e8; --wa:#25d366;
+  --shadow:0 10px 30px rgba(168,85,247,.16);
+  --shadow-lg:0 24px 60px rgba(168,85,247,.25);
+}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,247,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+.logo{font-size:1.5rem;font-weight:900;letter-spacing:-.02em}
+.logo b{color:var(--pink)}
+.logo span{color:var(--purple)}
+.sample-pill{font-size:.62rem;font-weight:800;letter-spacing:.18em;background:var(--gold);color:#3a2a00;padding:4px 10px;border-radius:999px;vertical-align:middle;margin-left:8px}
+.nav{display:flex;gap:22px;font-weight:700;font-size:.92rem}
+.nav a{opacity:.75}.nav a:hover{opacity:1;color:var(--pink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;border-radius:999px;padding:12px 22px;border:0;cursor:pointer;font-size:.95rem;transition:transform .25s,box-shadow .25s}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.4)}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-pink{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 8px 22px rgba(255,94,138,.4)}
+.btn-pink:hover{transform:translateY(-2px)}
+.btn-ghost{background:#fff;border:2px solid var(--pink);color:var(--pink)}
+.btn-ghost:hover{background:var(--pink);color:#fff}
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#ff5e8a 0%,#a855f7 48%,#3b82f6 100%);color:#fff;text-align:center;padding:84px 0 110px}
+.hero h1{font-size:clamp(3rem,10vw,5.6rem);font-weight:900;letter-spacing:-.03em;line-height:.95;text-shadow:0 6px 30px rgba(0,0,0,.25)}
+.hero h1 .l{display:inline-block;animation:letterIn .7s cubic-bezier(.2,.9,.3,1.2) both}
+.hero h1 em{font-style:normal;color:#ffe45e}
+.hero .tag{margin-top:18px;font-size:clamp(1.05rem,2.4vw,1.35rem);font-weight:600;opacity:.95}
+.hero .sub{margin-top:8px;opacity:.85;font-size:.98rem}
+.hero-actions{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero-actions .btn-wa{background:#fff;color:#128c4a;box-shadow:0 10px 26px rgba(0,0,0,.25)}
+.hero-actions .btn-ghost{border-color:#fff;color:#fff;background:transparent}
+.hero-actions .btn-ghost:hover{background:#fff;color:var(--purple)}
+@keyframes letterIn{from{opacity:0;transform:translateY(30px) scale(.8)}to{opacity:1;transform:none}}
+/* CSS balloons rising through the hero */
+.css-balloon{position:absolute;bottom:-140px;width:64px;height:80px;border-radius:50% 50% 50% 50%/55% 55% 45% 45%;opacity:.85;animation:rise linear infinite;pointer-events:none}
+.css-balloon::after{content:"";position:absolute;left:50%;top:78px;width:2px;height:70px;background:rgba(255,255,255,.7);transform:translateX(-50%)}
+.css-balloon::before{content:"";position:absolute;left:50%;bottom:-6px;width:12px;height:10px;background:inherit;transform:translateX(-50%);clip-path:polygon(50% 0,0 100%,100% 100%);opacity:.9}
+@keyframes rise{0%{transform:translateY(0) translateX(0)}50%{transform:translateY(-52vh) translateX(14px)}100%{transform:translateY(-105vh) translateX(-8px)}}
+/* confetti */
+.confetti{position:absolute;top:-14px;width:10px;height:14px;opacity:.9;animation:fall linear infinite;pointer-events:none}
+@keyframes fall{to{transform:translateY(105vh) rotate(720deg)}}
+/* ---------- marquee ---------- */
+.marquee{background:var(--ink);color:#ffe45e;overflow:hidden;padding:13px 0;font-weight:800;letter-spacing:.14em;font-size:.85rem;white-space:nowrap}
+.marquee-track{display:inline-block;animation:marq 26s linear infinite}
+@keyframes marq{to{transform:translateX(-50%)}}
+/* ---------- highlights ---------- */
+.highlights{background:#fff;border-bottom:1px solid var(--line)}
+.highlights .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:22px 20px}
+.hl{display:flex;gap:12px;align-items:center;justify-content:center;text-align:left}
+.hl .ic{font-size:1.7rem}
+.hl b{display:block;font-size:.98rem}
+.hl span{font-size:.85rem;color:var(--ink2)}
+/* ---------- sections ---------- */
+section{padding:64px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 34px}
+.eyebrow{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--pink);margin-bottom:10px}
+.sec-head h2{font-size:clamp(1.9rem,4.4vw,2.7rem);letter-spacing:-.02em}
+.sec-head p{color:var(--ink2);margin-top:10px}
+.count-note{font-size:.85rem;color:var(--ink2);margin-top:8px}
+/* filters */
+.filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+.fbtn{border:2px solid var(--line);background:#fff;border-radius:999px;padding:9px 18px;font-weight:800;font-size:.9rem;cursor:pointer;color:var(--ink2);transition:all .25s}
+.fbtn:hover{border-color:var(--pink);color:var(--pink)}
+.fbtn.active{background:linear-gradient(135deg,var(--pink),var(--purple));border-color:transparent;color:#fff;box-shadow:0 8px 18px rgba(255,94,138,.35)}
+/* products */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.prod{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:transform .35s,box-shadow .35s;animation:bob 4.5s ease-in-out infinite}
+.prod:nth-child(3n+2){animation-delay:.6s}
+.prod:nth-child(3n){animation-delay:1.2s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.prod:hover{transform:translateY(-6px) scale(1.01);box-shadow:var(--shadow-lg)}
+.prod .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:#fbeffb}
+.prod .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.prod:hover .ph img{transform:scale(1.07)}
+.badge{position:absolute;top:12px;left:12px;background:rgba(34,16,58,.85);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.prod .body{padding:18px 18px 20px}
+.prod h3{font-size:1.12rem;letter-spacing:-.01em}
+.prod p{color:var(--ink2);font-size:.9rem;margin:7px 0 14px;min-height:40px}
+.prod .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.price{font-size:1.25rem;font-weight:900;color:var(--pink)}
+.order-btn{background:var(--wa);color:#fff;font-weight:800;font-size:.85rem;padding:10px 16px;border-radius:999px;box-shadow:0 6px 16px rgba(37,211,102,.35);transition:transform .2s}
+.order-btn:hover{transform:scale(1.05)}
+/* how to order */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 20px;box-shadow:var(--shadow)}
+.step .n{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;font-size:1.4rem;font-weight:900;display:flex;align-items:center;justify-content:center}
+.step h3{margin-bottom:8px}
+.step p{color:var(--ink2);font-size:.93rem}
+/* visit */
+.visit-card{background:linear-gradient(135deg,#22103a,#4c1d95);color:#fff;border-radius:24px;padding:38px;text-align:center;box-shadow:var(--shadow-lg)}
+.visit-card h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:10px}
+.visit-card p{opacity:.85}
+.visit-card .btn{margin-top:22px}
+/* footer */
+.site-footer{background:var(--ink);color:#cfc4e8;padding:38px 0 90px;text-align:center}
+.site-footer b{color:#fff;font-size:1.3rem}
+.site-footer p{margin-top:8px;font-size:.9rem}
+.site-footer .gold{color:#ffe45e;font-weight:800}
+/* whatsapp float */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 10px 26px rgba(37,211,102,.5);animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .highlights .wrap{grid-template-columns:1fr;gap:12px}
+  .steps{grid-template-columns:1fr}
+  .nav{display:none}
+}
+@media(max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .hero{padding:64px 0 90px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body id="top">
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">🎈 <b>Balloon</b> <span>Bliss</span><span class="sample-pill">SAMPLE</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#balloons">Balloons</a>
+      <a href="#how">How to Order</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="css-balloon" style="left:6%;background:radial-gradient(circle at 35% 30%,#ff8fb0,#ff5e8a);animation-duration:17s"></div>
+    <div class="css-balloon" style="left:20%;width:48px;height:60px;background:radial-gradient(circle at 35% 30%,#c084fc,#a855f7);animation-duration:21s;animation-delay:3s"></div>
+    <div class="css-balloon" style="left:72%;width:56px;height:70px;background:radial-gradient(circle at 35% 30%,#fde68a,#f5b301);animation-duration:19s;animation-delay:1.5s"></div>
+    <div class="css-balloon" style="left:86%;width:44px;height:56px;background:radial-gradient(circle at 35% 30%,#93c5fd,#3b82f6);animation-duration:23s;animation-delay:5s"></div>
+    <div class="css-balloon" style="left:45%;width:40px;height:52px;background:radial-gradient(circle at 35% 30%,#fda4af,#fb7185);animation-duration:16s;animation-delay:7s"></div>
+    <span class="confetti" style="left:12%;background:#ffe45e;animation-duration:9s"></span>
+    <span class="confetti" style="left:28%;background:#ff5e8a;animation-duration:11s;animation-delay:2s"></span>
+    <span class="confetti" style="left:55%;background:#3b82f6;animation-duration:10s;animation-delay:1s"></span>
+    <span class="confetti" style="left:78%;background:#a855f7;animation-duration:12s;animation-delay:3s"></span>
+    <span class="confetti" style="left:90%;background:#25d366;animation-duration:9.5s;animation-delay:4s"></span>
+    <div class="wrap">
+      <h1 id="heroTitle"><span class="l" style="animation-delay:.05s">B</span><span class="l" style="animation-delay:.1s">A</span><span class="l" style="animation-delay:.15s">L</span><span class="l" style="animation-delay:.2s">L</span><span class="l" style="animation-delay:.25s">O</span><span class="l" style="animation-delay:.3s">O</span><span class="l" style="animation-delay:.35s">N</span><span class="l" style="animation-delay:.45s">&nbsp;</span><span class="l" style="animation-delay:.5s"><em>B</em></span><span class="l" style="animation-delay:.55s"><em>L</em></span><span class="l" style="animation-delay:.6s"><em>I</em></span><span class="l" style="animation-delay:.65s"><em>S</em></span><span class="l" style="animation-delay:.7s"><em>S</em></span></h1>
+      <p class="tag">Har khushi ko rang do 🎈</p>
+      <p class="sub">Birthday • Party • Celebration — foil, helium aur bouquet balloons</p>
+      <div class="hero-actions">
+        <a class="btn btn-wa" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener">💬 WhatsApp par Order Karo</a>
+        <a class="btn btn-ghost" href="#balloons">🎈 Balloons Dekho</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee"><div class="marquee-track"><span>HAPPY BIRTHDAY ✦ FOIL BALLOONS ✦ HELIUM FILLED ✦ BOUQUETS ✦ PARTY DECOR ✦ CARTOON BALLOONS ✦ SAME-DAY DELIVERY ✦&nbsp;</span><span aria-hidden="true">HAPPY BIRTHDAY ✦ FOIL BALLOONS ✦ HELIUM FILLED ✦ BOUQUETS ✦ PARTY DECOR ✦ CARTOON BALLOONS ✦ SAME-DAY DELIVERY ✦&nbsp;</span></div></div>
+
+  <div class="highlights">
+    <div class="wrap">
+      <div class="hl"><div class="ic">🎈</div><div><b>Helium Filled</b><span>Upar tairte hain, der tak chalte hain</span></div></div>
+      <div class="hl"><div class="ic">⚡</div><div><b>Same-Day Order</b><span>WhatsApp karo, aaj hi order karo</span></div></div>
+      <div class="hl"><div class="ic">🎉</div><div><b>Custom Themes</b><span>Birthday, anniversary, baby shower</span></div></div>
+    </div>
+  </div>
+
+  <section id="balloons">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Our Balloons</span>
+        <h2>Apni party ke liye chuno</h2>
+        <p>Har design photo mein dikh raha hai — jo pasand aaye, WhatsApp par order kar do.</p>
+        <p class="count-note" id="countNote">14 balloons — sab categories</p>
+      </div>
+      <div class="filters reveal" id="filters">
+        <button class="fbtn active" data-cat="all">Sab (14)</button>
+        <button class="fbtn" data-cat="birthday">Birthday (6)</button>
+        <button class="fbtn" data-cat="cartoon">Cartoon (3)</button>
+        <button class="fbtn" data-cat="helium">Helium (1)</button>
+        <button class="fbtn" data-cat="bouquet">Bouquet (2)</button>
+        <button class="fbtn" data-cat="decor">Decor (2)</button>
+      </div>
+      <div class="grid" id="balloonGrid">
+        <article class="prod reveal" data-cat="cartoon"><div class="ph"><img src="balloon-1.jpg" alt="Unicorn and cartoon foil balloons" loading="lazy"><span class="badge">Cartoon</span></div><div class="body"><h3>Unicorn &amp; Cartoon Foil Balloons</h3><p>Unicorn, Doraemon aur troll — bachon ke favourite characters.</p><div class="row"><span class="price">Rs 300</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Unicorn%20%26%20Cartoon%20Foil%20Balloons%20(Rs%20300)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-2.jpg" alt="Jungle birthday theme set" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>Jungle Birthday Theme Set</h3><p>Gold HAPPY BIRTHDAY + tiger, lion, zebra, giraffe — poora jungle theme.</p><div class="row"><span class="price">Rs 2,500</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Jungle%20Birthday%20Theme%20Set%20(Rs%202500)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-3.jpg" alt="50 number foil balloons" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>&ldquo;50&rdquo; Number Foil Balloons</h3><p>50th birthday ke liye bare pink number balloons — showstopper.</p><div class="row"><span class="price">Rs 800</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%2050%20Number%20Foil%20Balloons%20(Rs%20800)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="helium"><div class="ph"><img src="balloon-4.jpg" alt="Happy Birthday foil balloon helium filled" loading="lazy"><span class="badge">Helium</span></div><div class="body"><h3>Happy Birthday Foil Balloon — Helium</h3><p>Navy blue foil, helium filled — upar tairta hai, der tak chalta hai.</p><div class="row"><span class="price">Rs 350</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Happy%20Birthday%20Foil%20Balloon%20Helium%20(Rs%20350)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-5.jpg" alt="Pink birthday foil balloon set" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>Pink Birthday Foil Balloon Set</h3><p>Stars, hearts aur Happy Birthday rounds — pink theme set.</p><div class="row"><span class="price">Rs 1,200</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Pink%20Birthday%20Foil%20Balloon%20Set%20(Rs%201200)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="bouquet"><div class="ph"><img src="balloon-6.jpg" alt="Navy and gold birthday bouquet" loading="lazy"><span class="badge">Bouquet</span></div><div class="body"><h3>Navy &amp; Gold Birthday Bouquet</h3><p>&ldquo;Best Day&rdquo; bubble + navy, marble aur gold confetti balloons.</p><div class="row"><span class="price">Rs 1,800</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Navy%20%26%20Gold%20Birthday%20Bouquet%20(Rs%201800)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-7.jpg" alt="Colorful happy birthday foil set" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>Colorful Happy Birthday Foil Set</h3><p>Red, yellow, blue aur star — colorful birthday set.</p><div class="row"><span class="price">Rs 900</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Colorful%20Happy%20Birthday%20Foil%20Set%20(Rs%20900)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="bouquet"><div class="ph"><img src="balloon-8.jpg" alt="Silver star and red heart bouquet" loading="lazy"><span class="badge">Bouquet</span></div><div class="body"><h3>Silver Star &amp; Red Heart Bouquet</h3><p>Silver stars aur red hearts — asmaan jaisa khubsurat bouquet.</p><div class="row"><span class="price">Rs 1,000</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Silver%20Star%20%26%20Red%20Heart%20Bouquet%20(Rs%201000)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="decor"><div class="ph"><img src="balloon-9.jpg" alt="Colorful party balloon bunches" loading="lazy"><span class="badge">Decor</span></div><div class="body"><h3>Colorful Party Balloon Bunches</h3><p>Blue, yellow, pink, white — poora room sajao, party tayyar.</p><div class="row"><span class="price">Rs 1,500</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Colorful%20Party%20Balloon%20Bunches%20(Rs%201500)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="decor"><div class="ph"><img src="balloon-10.jpg" alt="Gold and white ceiling balloon decor" loading="lazy"><span class="badge">Decor</span></div><div class="body"><h3>Gold &amp; White Ceiling Balloon Decor</h3><p>Gold aur white ceiling decor — premium birthday setup.</p><div class="row"><span class="price">Rs 2,500</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Gold%20%26%20White%20Ceiling%20Balloon%20Decor%20(Rs%202500)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-11.jpg" alt="You are so special foil balloons" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>&ldquo;You&rsquo;re So Special&rdquo; Foil Balloons</h3><p>Star print foil — kisi khaas ko gift karo, muskurahat pakki.</p><div class="row"><span class="price">Rs 400</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Youre%20So%20Special%20Foil%20Balloons%20(Rs%20400)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-12.jpg" alt="Red heart foil balloons" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>Red Heart Foil Balloons</h3><p>Red hearts bunch — anniversary aur birthday ke liye perfect.</p><div class="row"><span class="price">Rs 600</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Red%20Heart%20Foil%20Balloons%20(Rs%20600)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="cartoon"><div class="ph"><img src="balloon-13.jpg" alt="Cat Dora and Hello Kitty foil balloons" loading="lazy"><span class="badge">Cartoon</span></div><div class="body"><h3>Cat, Dora &amp; Hello Kitty Foil Balloons</h3><p>Cat, Dora aur Hello Kitty — bachon ki sab se bari pasand.</p><div class="row"><span class="price">Rs 350</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Cat%20Dora%20%26%20Hello%20Kitty%20Foil%20Balloons%20(Rs%20350)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+        <article class="prod reveal" data-cat="cartoon"><div class="ph"><img src="balloon-14.jpg" alt="Animal hand balloons set of 10" loading="lazy"><span class="badge">Cartoon</span></div><div class="body"><h3>Animal Hand Balloons — Set of 10</h3><p>Astronaut, cat, dino, lion — 10 cute animal balloons, ek sath.</p><div class="row"><span class="price">Rs 500</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Animal%20Hand%20Balloons%20Set%20of%2010%20(Rs%20500)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">How to Order</span>
+        <h2>Order karna boht asaan hai</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><div class="n">1</div><h3>Pasand Karo</h3><p>Upar se apna favourite balloon ya theme chuno.</p></div>
+        <div class="step reveal"><div class="n">2</div><h3>WhatsApp Karo</h3><p>Order button dabao — message pehle se likha hoga, bas send karo.</p></div>
+        <div class="step reveal"><div class="n">3</div><h3>Delivery Lo</h3><p>Payment confirm karo — balloons ghar par ya party par pohanch jayenge.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <div class="visit-card reveal">
+        <h2>🎈 Party ki tayyari shuru karo</h2>
+        <p>WhatsApp par order karo — address, timing aur delivery ki details wahi mil jayengi.</p>
+        <a class="btn btn-wa" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener">💬 WhatsApp par Order Karo — 0306 1601587</a>
+        <p style="margin-top:16px;font-size:.88rem">📍 Main Bazaar, Kot Momin (demo) &nbsp;•&nbsp; 🕙 Subah 10 – Raat 9 (demo)</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <b>🎈 Balloon Bliss</b>
+    <p>Har khushi ko rang do — Birthday • Party • Celebration</p>
+    <p class="gold">Demo website by SAJEEL MODS — Shop website Rs 1,000, 1 din mein tayyar • WhatsApp 0306 1601587</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+(function () {
+  try {
+    /* ---------- filters ---------- */
+    var grid = document.getElementById('balloonGrid');
+    var note = document.getElementById('countNote');
+    var labels = { all: 'sab categories', birthday: 'Birthday', cartoon: 'Cartoon', helium: 'Helium', bouquet: 'Bouquet', decor: 'Decor' };
+    function applyFilter(cat) {
+      var cards = grid.querySelectorAll('.prod');
+      var shown = 0;
+      cards.forEach(function (c) {
+        var show = cat === 'all' || c.getAttribute('data-cat') === cat;
+        c.style.display = show ? '' : 'none';
+        if (show) shown++;
+      });
+      note.textContent = shown + ' balloons — ' + (labels[cat] || cat);
+      document.querySelectorAll('#filters .fbtn').forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-cat') === cat);
+      });
+      return shown;
+    }
+    document.getElementById('filters').addEventListener('click', function (e) {
+      var b = e.target && e.target.closest ? e.target.closest('.fbtn') : null;
+      if (b) applyFilter(b.getAttribute('data-cat'));
+    });
+    /* ---------- scroll reveal ---------- */
+    var targets = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12 });
+      targets.forEach(function (t) { io.observe(t); });
+    } else {
+      targets.forEach(function (t) { t.classList.add('in'); });
+    }
+    /* ---------- test hooks ---------- */
+    window.__BALLOON = {
+      filter: applyFilter,
+      visibleCount: function () {
+        var n = 0;
+        grid.querySelectorAll('.prod').forEach(function (c) { if (c.style.display !== 'none') n++; });
+        return n;
+      }
+    };
+  } catch (e) { /* demo extras are decorative — never break the page */ }
+})();
+</script>
+</body>
+</html>
