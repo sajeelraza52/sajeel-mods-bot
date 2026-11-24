@@ -1,0 +1,40 @@
+ALIYAN BALLOONS — BALLOON SHOP v2 — EDIT GUIDE
+================================================
+Client: Aliyan, Balloon Seller — WhatsApp 0347 0098911
+
+JO PEHLE SE SET HAI (badalne ki zaroorat nahi)
+------------------------------------------------
+- Shop naam: "Aliyan Balloons" (title, logo, hero, footer)
+- WhatsApp (orders): 923470098911 — header, hero, visit card, float button, har product ka Order button
+- 14 demo products: naam, price (Rs 300–2,500 — SAMPLE prices hain), description, category
+- Footer credit: "Website by SAJEEL MODS — Shop website Rs 1,000 • WhatsApp 0306 1601587" (tumhara sales number — rehne do)
+
+CLIENT SE POOCH KE BADALNA HAI
+-------------------------------
+1. ADDRESS / TIMING: abhi "Main Bazaar, Kot Momin (demo) • Subah 10 – Raat 9 (demo)" hai.
+   Asli address aur timing milte hi index.html mein search karo: "Main Bazaar, Kot Momin"
+2. REAL PRICES: demo prices sample hain — Aliyan Admin Panel se har product ki price edit kar sakta hai
+   (login → Edit → price badlo → Update). Koi code change nahi chahiye.
+3. balloon-1.jpg: is par Dreamstime watermark hai — Aliyan ko bolo apni saaf photo de,
+   phir Admin Panel se us product ko delete kar ke nayi photo ke saath dobara add kar de.
+4. SHOP NAAM: agar "Aliyan Balloons" ki jagah kuch aur naam ho to batao — main badal dunga
+   (header, hero, title, footer — 4 jagah).
+
+FIREBASE CONFIG (zaroori — upload tabhi chalega)
+--------------------------------------------------
+index.html mein "PASTE_YOUR_API_KEY" search karo — wahan apna Firebase config paste karo.
+Steps SETUP.txt mein hain (project banao → Auth user → RTDB + Storage → Rules publish → deploy).
+
+DEPLOY
+------
+Hosting tool se upload karo (saari files), naam: aliyan-balloons
+Link: https://sajeel-aliyan-balloons.vercel.app/
+
+FILES IS ZIP MEIN
+-----------------
+- index.html (shop + Admin Panel)
+- balloon-1.jpg … balloon-14.jpg (demo products ki photos)
+- SETUP.txt (Firebase steps)
+- EDIT.txt (ye file)
+- build-balloon-v2.py (build script — dobara banane ke liye)
+- test-balloon-v2.cjs (tests — 40/40 pass, 24 Nov 2026)

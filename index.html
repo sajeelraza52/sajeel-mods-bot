@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Balloon Bliss — Party Balloons &amp; Birthday Decor</title>
+<title>Aliyan Balloons — Party Balloons &amp; Birthday Decor</title>
 <meta name="description" content="Birthday, foil, helium aur bouquet balloons — har khushi ko rang do. Order on WhatsApp.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -133,19 +133,46 @@ section{padding:64px 0}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+/* ---------- admin panel (v2) ---------- */
+.admin-wrap{max-width:780px;margin:0 auto}
+.admin-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow);margin-bottom:22px}
+.admin-card h2{font-size:1.3rem;margin-bottom:6px}
+.admin-card .hint{color:var(--ink2);font-size:.9rem;margin-bottom:18px}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:800;font-size:.85rem;margin-bottom:6px}
+.field input,.field textarea,.field select{width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:12px;font:inherit;font-size:.95rem;background:#fff}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--pink);outline:none}
+.field textarea{min-height:74px;resize:vertical}
+#photoPreview{max-width:180px;border-radius:12px;margin-top:10px;display:none}
+.admin-list .arow{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.admin-list .arow:last-child{border-bottom:0}
+.admin-list img{width:58px;height:58px;object-fit:cover;border-radius:10px;flex:none}
+.admin-list .nm{font-weight:800;font-size:.95rem}
+.admin-list .meta{color:var(--ink2);font-size:.82rem}
+.abtn{border:0;cursor:pointer;font-weight:800;font-size:.82rem;padding:8px 14px;border-radius:999px}
+.abtn.edit{background:#ede9fe;color:#6d28d9}
+.abtn.del{background:#fee2e2;color:#b91c1c}
+.abtn:disabled{opacity:.5;cursor:wait}
+.msg{font-size:.9rem;font-weight:700;margin-top:10px}
+.msg.err{color:#dc2626}.msg.ok{color:#15803d}
+.rules-note{background:#fff7fb;border:1px dashed var(--pink);border-radius:16px;padding:18px;margin-top:6px}
+.rules-note pre{background:#22103a;color:#ffe45e;padding:14px;border-radius:12px;overflow:auto;font-size:.7rem;line-height:1.5;margin-top:10px;white-space:pre-wrap;word-break:break-all}
+.admin-link{color:#cfc4e8;font-size:.85rem}
+.admin-link:hover{color:#fff}
 </style>
 </head>
 <body id="top">
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="logo" href="#top">🎈 <b>Balloon</b> <span>Bliss</span><span class="sample-pill">SAMPLE</span></a>
+    <a class="logo" href="#top">🎈 <b>Aliyan</b> <span>Balloons</span></a>
     <nav class="nav" aria-label="Main">
       <a href="#balloons">Balloons</a>
       <a href="#how">How to Order</a>
       <a href="#visit">Visit Us</a>
     </nav>
-    <a class="btn btn-wa" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn-wa" href="https://wa.me/923470098911?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </header>
 
@@ -162,11 +189,11 @@ section{padding:64px 0}
     <span class="confetti" style="left:78%;background:#a855f7;animation-duration:12s;animation-delay:3s"></span>
     <span class="confetti" style="left:90%;background:#25d366;animation-duration:9.5s;animation-delay:4s"></span>
     <div class="wrap">
-      <h1 id="heroTitle"><span class="l" style="animation-delay:.05s">B</span><span class="l" style="animation-delay:.1s">A</span><span class="l" style="animation-delay:.15s">L</span><span class="l" style="animation-delay:.2s">L</span><span class="l" style="animation-delay:.25s">O</span><span class="l" style="animation-delay:.3s">O</span><span class="l" style="animation-delay:.35s">N</span><span class="l" style="animation-delay:.45s">&nbsp;</span><span class="l" style="animation-delay:.5s"><em>B</em></span><span class="l" style="animation-delay:.55s"><em>L</em></span><span class="l" style="animation-delay:.6s"><em>I</em></span><span class="l" style="animation-delay:.65s"><em>S</em></span><span class="l" style="animation-delay:.7s"><em>S</em></span></h1>
+      <h1 id="heroTitle"><span class="l" style="animation-delay:0.05s">A</span><span class="l" style="animation-delay:0.10s">L</span><span class="l" style="animation-delay:0.15s">I</span><span class="l" style="animation-delay:0.20s">Y</span><span class="l" style="animation-delay:0.25s">A</span><span class="l" style="animation-delay:0.30s">N</span><span class="l" style="animation-delay:0.35s">&nbsp;</span><span class="l" style="animation-delay:0.40s"><em>B</em></span><span class="l" style="animation-delay:0.45s"><em>A</em></span><span class="l" style="animation-delay:0.50s"><em>L</em></span><span class="l" style="animation-delay:0.55s"><em>L</em></span><span class="l" style="animation-delay:0.60s"><em>O</em></span><span class="l" style="animation-delay:0.65s"><em>O</em></span><span class="l" style="animation-delay:0.70s"><em>N</em></span><span class="l" style="animation-delay:0.75s"><em>S</em></span></h1>
       <p class="tag">Har khushi ko rang do 🎈</p>
       <p class="sub">Birthday • Party • Celebration — foil, helium aur bouquet balloons</p>
       <div class="hero-actions">
-        <a class="btn btn-wa" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener">💬 WhatsApp par Order Karo</a>
+        <a class="btn btn-wa" href="https://wa.me/923470098911?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener">💬 WhatsApp par Order Karo</a>
         <a class="btn btn-ghost" href="#balloons">🎈 Balloons Dekho</a>
       </div>
     </div>
@@ -198,22 +225,7 @@ section{padding:64px 0}
         <button class="fbtn" data-cat="bouquet">Bouquet (2)</button>
         <button class="fbtn" data-cat="decor">Decor (2)</button>
       </div>
-      <div class="grid" id="balloonGrid">
-        <article class="prod reveal" data-cat="cartoon"><div class="ph"><img src="balloon-1.jpg" alt="Unicorn and cartoon foil balloons" loading="lazy"><span class="badge">Cartoon</span></div><div class="body"><h3>Unicorn &amp; Cartoon Foil Balloons</h3><p>Unicorn, Doraemon aur troll — bachon ke favourite characters.</p><div class="row"><span class="price">Rs 300</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Unicorn%20%26%20Cartoon%20Foil%20Balloons%20(Rs%20300)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-2.jpg" alt="Jungle birthday theme set" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>Jungle Birthday Theme Set</h3><p>Gold HAPPY BIRTHDAY + tiger, lion, zebra, giraffe — poora jungle theme.</p><div class="row"><span class="price">Rs 2,500</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Jungle%20Birthday%20Theme%20Set%20(Rs%202500)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-3.jpg" alt="50 number foil balloons" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>&ldquo;50&rdquo; Number Foil Balloons</h3><p>50th birthday ke liye bare pink number balloons — showstopper.</p><div class="row"><span class="price">Rs 800</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%2050%20Number%20Foil%20Balloons%20(Rs%20800)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="helium"><div class="ph"><img src="balloon-4.jpg" alt="Happy Birthday foil balloon helium filled" loading="lazy"><span class="badge">Helium</span></div><div class="body"><h3>Happy Birthday Foil Balloon — Helium</h3><p>Navy blue foil, helium filled — upar tairta hai, der tak chalta hai.</p><div class="row"><span class="price">Rs 350</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Happy%20Birthday%20Foil%20Balloon%20Helium%20(Rs%20350)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-5.jpg" alt="Pink birthday foil balloon set" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>Pink Birthday Foil Balloon Set</h3><p>Stars, hearts aur Happy Birthday rounds — pink theme set.</p><div class="row"><span class="price">Rs 1,200</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Pink%20Birthday%20Foil%20Balloon%20Set%20(Rs%201200)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="bouquet"><div class="ph"><img src="balloon-6.jpg" alt="Navy and gold birthday bouquet" loading="lazy"><span class="badge">Bouquet</span></div><div class="body"><h3>Navy &amp; Gold Birthday Bouquet</h3><p>&ldquo;Best Day&rdquo; bubble + navy, marble aur gold confetti balloons.</p><div class="row"><span class="price">Rs 1,800</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Navy%20%26%20Gold%20Birthday%20Bouquet%20(Rs%201800)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-7.jpg" alt="Colorful happy birthday foil set" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>Colorful Happy Birthday Foil Set</h3><p>Red, yellow, blue aur star — colorful birthday set.</p><div class="row"><span class="price">Rs 900</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Colorful%20Happy%20Birthday%20Foil%20Set%20(Rs%20900)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="bouquet"><div class="ph"><img src="balloon-8.jpg" alt="Silver star and red heart bouquet" loading="lazy"><span class="badge">Bouquet</span></div><div class="body"><h3>Silver Star &amp; Red Heart Bouquet</h3><p>Silver stars aur red hearts — asmaan jaisa khubsurat bouquet.</p><div class="row"><span class="price">Rs 1,000</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Silver%20Star%20%26%20Red%20Heart%20Bouquet%20(Rs%201000)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="decor"><div class="ph"><img src="balloon-9.jpg" alt="Colorful party balloon bunches" loading="lazy"><span class="badge">Decor</span></div><div class="body"><h3>Colorful Party Balloon Bunches</h3><p>Blue, yellow, pink, white — poora room sajao, party tayyar.</p><div class="row"><span class="price">Rs 1,500</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Colorful%20Party%20Balloon%20Bunches%20(Rs%201500)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="decor"><div class="ph"><img src="balloon-10.jpg" alt="Gold and white ceiling balloon decor" loading="lazy"><span class="badge">Decor</span></div><div class="body"><h3>Gold &amp; White Ceiling Balloon Decor</h3><p>Gold aur white ceiling decor — premium birthday setup.</p><div class="row"><span class="price">Rs 2,500</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Gold%20%26%20White%20Ceiling%20Balloon%20Decor%20(Rs%202500)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-11.jpg" alt="You are so special foil balloons" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>&ldquo;You&rsquo;re So Special&rdquo; Foil Balloons</h3><p>Star print foil — kisi khaas ko gift karo, muskurahat pakki.</p><div class="row"><span class="price">Rs 400</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Youre%20So%20Special%20Foil%20Balloons%20(Rs%20400)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="birthday"><div class="ph"><img src="balloon-12.jpg" alt="Red heart foil balloons" loading="lazy"><span class="badge">Birthday</span></div><div class="body"><h3>Red Heart Foil Balloons</h3><p>Red hearts bunch — anniversary aur birthday ke liye perfect.</p><div class="row"><span class="price">Rs 600</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Red%20Heart%20Foil%20Balloons%20(Rs%20600)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="cartoon"><div class="ph"><img src="balloon-13.jpg" alt="Cat Dora and Hello Kitty foil balloons" loading="lazy"><span class="badge">Cartoon</span></div><div class="body"><h3>Cat, Dora &amp; Hello Kitty Foil Balloons</h3><p>Cat, Dora aur Hello Kitty — bachon ki sab se bari pasand.</p><div class="row"><span class="price">Rs 350</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Cat%20Dora%20%26%20Hello%20Kitty%20Foil%20Balloons%20(Rs%20350)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-        <article class="prod reveal" data-cat="cartoon"><div class="ph"><img src="balloon-14.jpg" alt="Animal hand balloons set of 10" loading="lazy"><span class="badge">Cartoon</span></div><div class="body"><h3>Animal Hand Balloons — Set of 10</h3><p>Astronaut, cat, dino, lion — 10 cute animal balloons, ek sath.</p><div class="row"><span class="price">Rs 500</span><a class="order-btn" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20Animal%20Hand%20Balloons%20Set%20of%2010%20(Rs%20500)%20order%20karna%20hai." target="_blank" rel="noopener">Order Karo</a></div></div></article>
-      </div>
+            <div class="grid" id="balloonGrid"></div>
     </div>
   </section>
 
@@ -236,7 +248,7 @@ section{padding:64px 0}
       <div class="visit-card reveal">
         <h2>🎈 Party ki tayyari shuru karo</h2>
         <p>WhatsApp par order karo — address, timing aur delivery ki details wahi mil jayengi.</p>
-        <a class="btn btn-wa" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener">💬 WhatsApp par Order Karo — 0306 1601587</a>
+        <a class="btn btn-wa" href="https://wa.me/923470098911?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener">💬 WhatsApp par Order Karo — 0347 0098911</a>
         <p style="margin-top:16px;font-size:.88rem">📍 Main Bazaar, Kot Momin (demo) &nbsp;•&nbsp; 🕙 Subah 10 – Raat 9 (demo)</p>
       </div>
     </div>
@@ -245,60 +257,398 @@ section{padding:64px 0}
 
 <footer class="site-footer">
   <div class="wrap">
-    <b>🎈 Balloon Bliss</b>
+    <b>🎈 Aliyan Balloons</b>
     <p>Har khushi ko rang do — Birthday • Party • Celebration</p>
-    <p class="gold">Demo website by SAJEEL MODS — Shop website Rs 1,000, 1 din mein tayyar • WhatsApp 0306 1601587</p>
+    <p class="gold">Website by SAJEEL MODS — Shop website Rs 1,000, 1 din mein tayyar • WhatsApp 0306 1601587</p>
+    <p style="margin-top:14px"><a class="admin-link" href="#admin" onclick="showAdmin();return false">Admin Login</a></p>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/923061601587?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
 
+<!-- ─── ADMIN PANEL (v2) ─── -->
+<section id="adminView" style="display:none;padding:64px 0">
+  <div class="wrap admin-wrap">
+    <div class="admin-card" id="adminLoginCard">
+      <h2>🔐 Admin Login</h2>
+      <p class="hint">Sirf Aliyan (shop owner) login karega — email aur password Firebase mein banaya gaya hai.</p>
+      <div class="field"><label>Email</label><input id="adminEmail" type="email" placeholder="admin email"></div>
+      <div class="field"><label>Password</label><input id="adminPass" type="password" placeholder="password"></div>
+      <div class="msg err" id="adminErr" style="display:none"></div>
+      <button class="btn btn-pink" id="adminLoginBtn" onclick="doAdminLogin()">Login</button>
+      <p style="margin-top:14px"><a href="#" onclick="showShop();return false">← Shop par wapas jao</a></p>
+    </div>
+    <div id="adminPanel" style="display:none">
+      <div class="admin-card">
+        <h2>➕ Naya Product Add Karo</h2>
+        <p class="hint">Photo upload karo, naam, price aur description likho — Save karte hi product shop par live aa jayega.</p>
+        <div class="field"><label>Photo *</label><input id="pPhoto" type="file" accept="image/*"><img id="photoPreview" alt="preview"></div>
+        <div class="field"><label>Naam *</label><input id="pName" placeholder="e.g. Pink Birthday Balloon Set"></div>
+        <div class="field"><label>Price (Rs) *</label><input id="pPrice" type="number" min="1" placeholder="e.g. 500"></div>
+        <div class="field"><label>Category *</label><select id="pCat"><option value="birthday">Birthday</option><option value="cartoon">Cartoon</option><option value="helium">Helium</option><option value="bouquet">Bouquet</option><option value="decor">Decor</option></select></div>
+        <div class="field"><label>Description *</label><textarea id="pDesc" placeholder="e.g. Pink stars aur hearts — birthday ke liye perfect set."></textarea></div>
+        <div class="msg err" id="prodErr" style="display:none"></div>
+        <div class="msg ok" id="prodOk" style="display:none"></div>
+        <button class="btn btn-pink" id="saveProdBtn" onclick="saveProduct()">💾 Save Product</button>
+        <button class="btn btn-ghost" id="cancelEditBtn" style="display:none;margin-left:8px" onclick="cancelEdit()">Cancel</button>
+      </div>
+      <div class="admin-card">
+        <h2>📦 Products (<span id="adminCount">0</span>)</h2>
+        <p class="hint">Neeche wale products abhi shop par dikh rahe hain. Edit ya Delete dabao.</p>
+        <button class="btn btn-ghost" id="importBtn" onclick="importDemo()">📥 Demo wale 14 products import karo</button>
+        <p class="hint" style="margin-top:10px">Sirf tab dabao jab products khaali hon — warna kuch nahi hoga. Agar saare products delete kar do ge to demo wale 14 phir dikhne lagenge.</p>
+        <div class="admin-list" id="adminList"></div>
+      </div>
+      <div class="admin-card rules-note">
+        <b>🔐 Firebase Rules:</b> Ye rules Firebase Console mein paste karo (pehle RTDB, phir Storage) — warna upload kaam nahi karega.
+        <p style="margin-top:8px;font-size:.85rem"><b>Realtime Database → Rules:</b></p>
+        <pre id="rtdbRules">{"rules":{"products":{".read":true,".write":"auth != null"}}}</pre>
+        <p style="margin-top:8px;font-size:.85rem"><b>Storage → Rules:</b></p>
+        <pre>rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /products/{fileName} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}</pre>
+      </div>
+      <button class="btn btn-ghost" onclick="doAdminLogout()">Logout</button>
+      <a href="#" onclick="showShop();return false" style="margin-left:14px">← Shop Dekho</a>
+    </div>
+  </div>
+</section>
+
+<a class="wa-float" href="https://wa.me/923470098911?text=Assalam-o-Alaikum!%20Mujhe%20balloons%20order%20karne%20hain." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
 <script>
-(function () {
+// ===== Aliyan Balloons v2 — Firebase products + Admin =====
+var SHOP_WA = '923470098911';
+// TODO (SETUP.txt): Firebase project banao aur yahan apna config paste karo.
+var firebaseConfig = {
+  apiKey: "PASTE_YOUR_API_KEY",
+  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
+  databaseURL: "https://PASTE_YOUR_PROJECT-default-rtdb.firebaseio.com",
+  projectId: "PASTE_YOUR_PROJECT",
+  storageBucket: "PASTE_YOUR_PROJECT.appspot.com",
+  messagingSenderId: "PASTE_YOUR_SENDER_ID",
+  appId: "PASTE_YOUR_APP_ID"
+};
+var FIREBASE_ON = !!(firebaseConfig.apiKey && firebaseConfig.apiKey.indexOf('PASTE') !== 0);
+
+var CATS = { birthday: 'Birthday', cartoon: 'Cartoon', helium: 'Helium', bouquet: 'Bouquet', decor: 'Decor' };
+var DEFAULT_PRODUCTS = [
+  { name: 'Unicorn & Cartoon Foil Balloons', desc: 'Unicorn, Doraemon aur troll — bachon ke favourite characters.', price: 300, cat: 'cartoon', img: 'balloon-1.jpg' },
+  { name: 'Jungle Birthday Theme Set', desc: 'Gold HAPPY BIRTHDAY + tiger, lion, zebra, giraffe — poora jungle theme.', price: 2500, cat: 'birthday', img: 'balloon-2.jpg' },
+  { name: '"50" Number Foil Balloons', desc: '50th birthday ke liye bare pink number balloons — showstopper.', price: 800, cat: 'birthday', img: 'balloon-3.jpg' },
+  { name: 'Happy Birthday Foil Balloon — Helium', desc: 'Navy blue foil, helium filled — upar tairta hai, der tak chalta hai.', price: 350, cat: 'helium', img: 'balloon-4.jpg' },
+  { name: 'Pink Birthday Foil Balloon Set', desc: 'Stars, hearts aur Happy Birthday rounds — pink theme set.', price: 1200, cat: 'birthday', img: 'balloon-5.jpg' },
+  { name: 'Navy & Gold Birthday Bouquet', desc: '"Best Day" bubble + navy, marble aur gold confetti balloons.', price: 1800, cat: 'bouquet', img: 'balloon-6.jpg' },
+  { name: 'Colorful Happy Birthday Foil Set', desc: 'Red, yellow, blue aur star — colorful birthday set.', price: 900, cat: 'birthday', img: 'balloon-7.jpg' },
+  { name: 'Silver Star & Red Heart Bouquet', desc: 'Silver stars aur red hearts — asmaan jaisa khubsurat bouquet.', price: 1000, cat: 'bouquet', img: 'balloon-8.jpg' },
+  { name: 'Colorful Party Balloon Bunches', desc: 'Blue, yellow, pink, white — poora room sajao, party tayyar.', price: 1500, cat: 'decor', img: 'balloon-9.jpg' },
+  { name: 'Gold & White Ceiling Balloon Decor', desc: 'Gold aur white ceiling decor — premium birthday setup.', price: 2500, cat: 'decor', img: 'balloon-10.jpg' },
+  { name: '“You’re So Special” Foil Balloons', desc: 'Star print foil — kisi khaas ko gift karo, muskurahat pakki.', price: 400, cat: 'birthday', img: 'balloon-11.jpg' },
+  { name: 'Red Heart Foil Balloons', desc: 'Red hearts bunch — anniversary aur birthday ke liye perfect.', price: 600, cat: 'birthday', img: 'balloon-12.jpg' },
+  { name: 'Cat, Dora & Hello Kitty Foil Balloons', desc: 'Cat, Dora aur Hello Kitty — bachon ki sab se bari pasand.', price: 350, cat: 'cartoon', img: 'balloon-13.jpg' },
+  { name: 'Animal Hand Balloons — Set of 10', desc: 'Astronaut, cat, dino, lion — 10 cute animal balloons, ek sath.', price: 500, cat: 'cartoon', img: 'balloon-14.jpg' }
+];
+
+var allProducts = DEFAULT_PRODUCTS.slice();
+var activeCat = 'all';
+var fbApp = null, fbDb = null, fbAuth = null, fbStorage = null;
+var isAdmin = false, productsBound = false, editingId = null;
+
+function esc(s){ s = String(s == null ? '' : s); var m = {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}; return s.replace(/[&<>"']/g, function(c){ return m[c]; }); }
+function orderUrl(p){ return 'https://wa.me/' + SHOP_WA + '?text=' + encodeURIComponent('Assalam-o-Alaikum! Mujhe ' + p.name + ' (Rs ' + p.price + ') order karna hai.'); }
+
+function cardHTML(p){
+  return '<article class="prod reveal" data-cat="' + esc(p.cat) + '"><div class="ph"><img src="' + esc(p.img) + '" alt="' + esc(p.name) + '" loading="lazy"><span class="badge">' + esc(CATS[p.cat] || p.cat) + '</span></div><div class="body"><h3>' + esc(p.name) + '</h3><p>' + esc(p.desc) + '</p><div class="row"><span class="price">Rs ' + Number(p.price).toLocaleString('en-US') + '</span><a class="order-btn" href="' + orderUrl(p) + '" target="_blank" rel="noopener">Order Karo</a></div></div></article>';
+}
+function observeReveals(){
+  var targets = document.querySelectorAll('#balloonGrid .reveal:not(.in)');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    targets.forEach(function (t) { io.observe(t); });
+  } else {
+    targets.forEach(function (t) { t.classList.add('in'); });
+  }
+}
+function updateFilterLabels(){
+  var counts = { all: allProducts.length, birthday: 0, cartoon: 0, helium: 0, bouquet: 0, decor: 0 };
+  allProducts.forEach(function (p) { if (counts[p.cat] != null) counts[p.cat]++; });
+  var labels = { all: 'Sab', birthday: 'Birthday', cartoon: 'Cartoon', helium: 'Helium', bouquet: 'Bouquet', decor: 'Decor' };
+  document.querySelectorAll('#filters .fbtn').forEach(function (b) {
+    var c = b.getAttribute('data-cat');
+    b.textContent = labels[c] + ' (' + (counts[c] || 0) + ')';
+  });
+  var note = document.getElementById('countNote');
+  var shown = allProducts.filter(function (p) { return activeCat === 'all' || p.cat === activeCat; }).length;
+  note.textContent = shown + ' balloons — ' + (activeCat === 'all' ? 'sab categories' : (CATS[activeCat] || activeCat));
+}
+function renderProducts(list){
+  allProducts = list.slice();
+  document.getElementById('balloonGrid').innerHTML = list.map(cardHTML).join('');
+  updateFilterLabels();
+  applyFilter(activeCat, true);
+  observeReveals();
+}
+function applyFilter(cat, skipNote){
+  activeCat = cat;
+  var shown = 0;
+  document.querySelectorAll('#balloonGrid .prod').forEach(function (c) {
+    var show = cat === 'all' || c.getAttribute('data-cat') === cat;
+    c.style.display = show ? '' : 'none';
+    if (show) shown++;
+  });
+  if (!skipNote) {
+    document.getElementById('countNote').textContent = shown + ' balloons — ' + (cat === 'all' ? 'sab categories' : (CATS[cat] || cat));
+  }
+  document.querySelectorAll('#filters .fbtn').forEach(function (b) {
+    b.classList.toggle('active', b.getAttribute('data-cat') === cat);
+  });
+  return shown;
+}
+
+// ---------- Firebase ----------
+function initFirebase(){
+  if (!FIREBASE_ON || typeof firebase === 'undefined') return;
   try {
-    /* ---------- filters ---------- */
-    var grid = document.getElementById('balloonGrid');
-    var note = document.getElementById('countNote');
-    var labels = { all: 'sab categories', birthday: 'Birthday', cartoon: 'Cartoon', helium: 'Helium', bouquet: 'Bouquet', decor: 'Decor' };
-    function applyFilter(cat) {
-      var cards = grid.querySelectorAll('.prod');
-      var shown = 0;
-      cards.forEach(function (c) {
-        var show = cat === 'all' || c.getAttribute('data-cat') === cat;
-        c.style.display = show ? '' : 'none';
-        if (show) shown++;
-      });
-      note.textContent = shown + ' balloons — ' + (labels[cat] || cat);
-      document.querySelectorAll('#filters .fbtn').forEach(function (b) {
-        b.classList.toggle('active', b.getAttribute('data-cat') === cat);
-      });
-      return shown;
-    }
-    document.getElementById('filters').addEventListener('click', function (e) {
-      var b = e.target && e.target.closest ? e.target.closest('.fbtn') : null;
-      if (b) applyFilter(b.getAttribute('data-cat'));
-    });
-    /* ---------- scroll reveal ---------- */
-    var targets = document.querySelectorAll('.reveal');
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
-      }, { threshold: 0.12 });
-      targets.forEach(function (t) { io.observe(t); });
+    fbApp = firebase.initializeApp(firebaseConfig);
+    fbDb = firebase.database();
+    fbAuth = firebase.auth();
+    fbStorage = firebase.storage();
+    bindAuthListener();
+    startProductsListener();
+  } catch (e) { /* Firebase off — demo products dikhenge */ }
+}
+function bindAuthListener(){
+  if (!fbAuth) return;
+  fbAuth.onAuthStateChanged(function (u) {
+    isAdmin = !!u;
+    if (u && document.getElementById('adminView').style.display !== 'none') showAdminPanel();
+  });
+}
+function startProductsListener(){
+  if (!fbDb || productsBound) return;
+  productsBound = true;
+  fbDb.ref('products').on('value', function (snap) {
+    var v = snap.val();
+    if (v && Object.keys(v).length) {
+      var list = Object.keys(v).map(function (k) { var p = v[k]; p.id = k; return p; });
+      list.sort(function (a, b) { return (a.createdAt || 0) - (b.createdAt || 0); });
+      renderProducts(list);
+      if (isAdmin) renderAdminList(list);
     } else {
-      targets.forEach(function (t) { t.classList.add('in'); });
+      renderProducts(DEFAULT_PRODUCTS);
+      if (isAdmin) renderAdminList(DEFAULT_PRODUCTS);
     }
-    /* ---------- test hooks ---------- */
-    window.__BALLOON = {
-      filter: applyFilter,
-      visibleCount: function () {
-        var n = 0;
-        grid.querySelectorAll('.prod').forEach(function (c) { if (c.style.display !== 'none') n++; });
-        return n;
-      }
-    };
-  } catch (e) { /* demo extras are decorative — never break the page */ }
+  });
+}
+
+// ---------- Admin ----------
+function showAdmin(){
+  document.querySelector('main').style.display = 'none';
+  document.getElementById('adminView').style.display = 'block';
+  window.scrollTo(0, 0);
+  if (!FIREBASE_ON) {
+    var e = document.getElementById('adminErr');
+    e.textContent = '❌ Firebase setup nahi hua — pehle SETUP.txt wale steps karo aur firebaseConfig paste karo.';
+    e.style.display = 'block';
+  }
+  if (fbAuth && fbAuth.currentUser) showAdminPanel();
+  else { document.getElementById('adminLoginCard').style.display = 'block'; document.getElementById('adminPanel').style.display = 'none'; }
+}
+function showShop(){
+  document.getElementById('adminView').style.display = 'none';
+  document.querySelector('main').style.display = '';
+  if (location.hash === '#admin') history.replaceState(null, '', location.pathname);
+}
+function showAdminPanel(){
+  document.getElementById('adminLoginCard').style.display = 'none';
+  document.getElementById('adminPanel').style.display = 'block';
+  renderAdminList(allProducts);
+}
+function doAdminLogin(){
+  var err = document.getElementById('adminErr');
+  err.style.display = 'none';
+  var email = (document.getElementById('adminEmail').value || '').trim();
+  var pass = document.getElementById('adminPass').value;
+  if (!email || !pass) { err.textContent = '❌ Email aur password likho.'; err.style.display = 'block'; return; }
+  if (!fbAuth) { err.textContent = '❌ Firebase not connected.'; err.style.display = 'block'; return; }
+  fbAuth.signInWithEmailAndPassword(email, pass).catch(function (e) {
+    err.textContent = '❌ Login failed: ' + (e.code === 'auth/user-not-found' ? 'User not found.' : e.code === 'auth/wrong-password' ? 'Wrong password.' : e.message);
+    err.style.display = 'block';
+  });
+}
+function doAdminLogout(){
+  if (fbAuth) fbAuth.signOut();
+  isAdmin = false;
+  showShop();
+}
+function validateProduct(p){
+  if (!p.name) return 'Naam likho.';
+  if (!(p.price > 0)) return 'Sahi price likho (Rs).';
+  if (!p.cat || !CATS[p.cat]) return 'Category chuno.';
+  if (!p.desc) return 'Description likho.';
+  if (!p.img) return 'Photo chuno.';
+  return '';
+}
+function readFormProduct(){
+  return {
+    name: (document.getElementById('pName').value || '').trim(),
+    price: parseInt(document.getElementById('pPrice').value, 10) || 0,
+    cat: document.getElementById('pCat').value,
+    desc: (document.getElementById('pDesc').value || '').trim(),
+    img: window.__pendingPhotoUrl || ''
+  };
+}
+function clearForm(){
+  ['pName', 'pPrice', 'pDesc'].forEach(function (id) { document.getElementById(id).value = ''; });
+  document.getElementById('pPhoto').value = '';
+  document.getElementById('photoPreview').style.display = 'none';
+  window.__pendingPhotoUrl = '';
+  editingId = null;
+  document.getElementById('saveProdBtn').textContent = '💾 Save Product';
+  document.getElementById('cancelEditBtn').style.display = 'none';
+}
+function showProdMsg(kind, msg){
+  var e = document.getElementById(kind === 'err' ? 'prodErr' : 'prodOk');
+  var o = document.getElementById(kind === 'err' ? 'prodOk' : 'prodErr');
+  o.style.display = 'none';
+  e.textContent = msg; e.style.display = 'block';
+}
+async function saveProduct(){
+  var btn = document.getElementById('saveProdBtn');
+  var p = readFormProduct();
+  var file = document.getElementById('pPhoto').files[0];
+  if (editingId && !file) {
+    var cur = allProducts.find(function (x) { return x.id === editingId; });
+    if (cur) p.img = cur.img;
+  }
+  if (!file && !p.img) { showProdMsg('err', '❌ Photo chuno.'); return; }
+  var v = validateProduct(file ? Object.assign({}, p, { img: 'file-chosen' }) : p);
+  if (v) { showProdMsg('err', '❌ ' + v); return; }
+  if (!fbDb) { showProdMsg('err', '❌ Firebase not connected — SETUP.txt dekho.'); return; }
+  btn.disabled = true;
+  btn.textContent = file ? '⏳ Photo upload ho rahi hai...' : '⏳ Save ho raha hai...';
+  try {
+    if (file) {
+      var path = 'products/' + Date.now() + '_' + file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+      var snap = await fbStorage.ref(path).put(file);
+      p.img = await snap.ref.getDownloadURL();
+    }
+    if (editingId) {
+      await fbDb.ref('products/' + editingId).update(p);
+      showProdMsg('ok', '✅ Product update ho gaya!');
+    } else {
+      p.createdAt = Date.now();
+      await fbDb.ref('products').push(p);
+      showProdMsg('ok', '✅ Product add ho gaya — shop par live hai!');
+    }
+    clearForm();
+  } catch (e) {
+    showProdMsg('err', '❌ Save nahi hua: ' + (e.message || e));
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '💾 Save Product';
+  }
+}
+function editProduct(id){
+  var p = allProducts.find(function (x) { return x.id === id || x.name === id; });
+  if (!p) return;
+  editingId = p.id || p.name;
+  document.getElementById('pName').value = p.name;
+  document.getElementById('pPrice').value = p.price;
+  document.getElementById('pCat').value = p.cat;
+  document.getElementById('pDesc').value = p.desc;
+  window.__pendingPhotoUrl = p.img || '';
+  var prev = document.getElementById('photoPreview');
+  if (p.img) { prev.src = p.img; prev.style.display = 'block'; }
+  document.getElementById('saveProdBtn').textContent = '💾 Update Product';
+  document.getElementById('cancelEditBtn').style.display = 'inline-flex';
+  var top = document.getElementById('adminLoginCard');
+  if (top && top.scrollIntoView) top.scrollIntoView({ behavior: 'smooth' });
+  window.scrollTo(0, 0);
+}
+function cancelEdit(){ clearForm(); }
+function deleteProduct(id){
+  if (!confirm('Ye product delete kar dun?')) return;
+  if (!fbDb) return;
+  fbDb.ref('products/' + id).remove();
+}
+function renderAdminList(list){
+  var box = document.getElementById('adminList');
+  document.getElementById('adminCount').textContent = list.length;
+  if (!list.length) { box.innerHTML = '<p class="hint">Koi product nahi — upar se add karo ya demo wale import karo.</p>'; return; }
+  box.innerHTML = list.map(function (p) {
+    var key = p.id || p.name;
+    return '<div class="arow"><img src="' + esc(p.img) + '" alt=""><div style="flex:1"><div class="nm">' + esc(p.name) + '</div><div class="meta">Rs ' + Number(p.price).toLocaleString('en-US') + ' • ' + esc(CATS[p.cat] || p.cat) + '</div></div>' +
+      (p.id ? '<button class="abtn edit" onclick="editProduct(\'' + String(p.id).replace(/'/g, '') + '\')">Edit</button><button class="abtn del" onclick="deleteProduct(\'' + String(p.id).replace(/'/g, '') + '\')">Delete</button>' : '<span class="meta">demo</span>') + '</div>';
+  }).join('');
+}
+async function importDemo(){
+  var btn = document.getElementById('importBtn');
+  if (!fbDb) { showProdMsg('err', '❌ Firebase not connected — SETUP.txt dekho.'); return; }
+  var snap = await fbDb.ref('products').once('value');
+  if (snap.val()) { showProdMsg('err', 'Products pehle se hain — import ki zaroorat nahi.'); return; }
+  btn.disabled = true; btn.textContent = '⏳ Import ho raha hai...';
+  try {
+    for (var i = 0; i < DEFAULT_PRODUCTS.length; i++) {
+      var p = Object.assign({}, DEFAULT_PRODUCTS[i]);
+      p.createdAt = Date.now() + i;
+      await fbDb.ref('products').push(p);
+    }
+    showProdMsg('ok', '✅ 14 demo products import ho gaye!');
+  } catch (e) {
+    showProdMsg('err', '❌ Import nahi hua: ' + (e.message || e));
+  } finally {
+    btn.disabled = false; btn.textContent = '📥 Demo wale 14 products import karo';
+  }
+}
+
+// ---------- photo preview ----------
+document.getElementById('pPhoto').addEventListener('change', function (e) {
+  var f = e.target.files[0];
+  var prev = document.getElementById('photoPreview');
+  if (f) { prev.src = URL.createObjectURL(f); prev.style.display = 'block'; }
+  else { prev.style.display = 'none'; }
+});
+
+// ---------- init ----------
+(function () {
+  renderProducts(DEFAULT_PRODUCTS);
+  document.getElementById('filters').addEventListener('click', function (e) {
+    var b = e.target && e.target.closest ? e.target.closest('.fbtn') : null;
+    if (b) applyFilter(b.getAttribute('data-cat'));
+  });
+  if (location.hash === '#admin') showAdmin();
+  initFirebase();
+  window.__BALLOON = {
+    filter: applyFilter,
+    visibleCount: function () {
+      var n = 0;
+      document.querySelectorAll('#balloonGrid .prod').forEach(function (c) { if (c.style.display !== 'none') n++; });
+      return n;
+    },
+    getProducts: function () { return allProducts; },
+    validateProduct: validateProduct,
+    renderProducts: renderProducts,
+    buildOrderUrl: orderUrl,
+    DEFAULT_PRODUCTS: DEFAULT_PRODUCTS,
+    SHOP_WA: SHOP_WA,
+    _setFirebase: function (db, auth, storage) { fbDb = db; fbAuth = auth; fbStorage = storage; bindAuthListener(); startProductsListener(); },
+    _getFbDb: function () { return fbDb; }
+  };
 })();
 </script>
+</body>
+</html>
 </body>
 </html>
