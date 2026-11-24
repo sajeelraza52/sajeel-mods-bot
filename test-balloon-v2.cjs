@@ -133,7 +133,8 @@ async function runPlain() {
   check('add-product form exists', !!document.getElementById('pPhoto') && !!document.getElementById('pName') && !!document.getElementById('pPrice') && !!document.getElementById('pCat') && !!document.getElementById('pDesc'));
   check('import button exists', !!document.getElementById('importBtn'));
   check('rules note has products read/write', document.getElementById('rtdbRules').textContent.includes('"products"') && document.getElementById('rtdbRules').textContent.includes('auth != null'));
-  check('firebase config is placeholder (not live)', html.includes('PASTE_YOUR_API_KEY'));
+  check('firebase config is Gloria Bite project', html.includes('projectId: "gloria-bite"') && html.includes('databaseURL: "https://gloria-bite-default-rtdb.firebaseio.com"'));
+  check('no PASTE placeholder left in index.html', !html.includes('PASTE_YOUR'));
 }
 
 async function runAdminHash() {
@@ -150,7 +151,8 @@ async function runAdminHash() {
   window.URL.revokeObjectURL = () => {};
   await sleep(50);
   check('#admin hash opens admin view', document.getElementById('adminView').style.display === 'block' && document.querySelector('main').style.display === 'none');
-  check('#admin shows Firebase setup warning (no config yet)', document.getElementById('adminErr').style.display === 'block');
+  check('#admin shows no setup warning (config is live)', document.getElementById('adminErr').style.display === 'none');
+  check('#admin shows login card', document.getElementById('adminLoginCard').style.display !== 'none');
 }
 
 async function runAuthed() {

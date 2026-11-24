@@ -4,31 +4,25 @@ Banaya: Sajeel Mods (Jnii) — 24 Nov 2026
 Client: Aliyan, Balloon Seller — WhatsApp 0347 0098911 (orders is par jayenge)
 Demo v1 se upgrade: ab client khud photo upload kar ke product add/edit/delete kar sakta hai.
 
-YE KYA HAI
-----------
-- Public shop: wahi cinematic design (hero, marquee, filters, WhatsApp order buttons)
-- Admin Panel: footer mein "Admin Login" link (ya site kholo + #admin likho)
-- Admin login kare → photo upload + naam + price + description + category → Save → product shop par live
-- Photos Firebase Storage mein, products Firebase Realtime Database mein
-- Pehle se 14 demo products hain (balloon-1..14.jpg) — Admin Panel mein "Demo wale 14 products import karo" button se database mein daalo
+FIREBASE: GLORIA BITE WALA PROJECT USE HO RAHA HAI
+---------------------------------------------------
+Config index.html mein pehle se daal di hai (project: gloria-bite).
+Gloria Bite khud Firestore + Auth use karta hai — RTDB aur Storage use nahi karta,
+is liye balloon shop ka RTDB `products` aur Storage `products/` us se takrayega nahi.
+Dono sites ka data ek hi project mein hoga — ye Sajeel ka faisla hai.
 
-FIREBASE SETUP (Sajeel — tum ne kaha tum banaoge)
---------------------------------------------------
-1. Firebase Console kholo: https://console.firebase.google.com/
-2. "Add project" → naam: aliyan-balloons → Google Analytics OFF → Create project
-3. Build → Authentication → Sign-in method → Email/Password → Enable → Save
-4. Authentication → Users → Add user → Aliyan ka admin email + password banao
-   (ye login sirf Aliyan ko do — is se wo products manage karega)
-5. Build → Realtime Database → Create database → Locked mode → Start
-   → databaseURL copy karo (https://aliyan-balloons-default-rtdb.firebaseio.com jaisa)
-6. Build → Storage → Get started → Start in production mode
-7. Project Settings (gear icon) → Your apps → Web app (</>) → app nickname: aliyan-balloons
-   → Register → jo config dikhe (apiKey, authDomain, databaseURL, projectId,
-   storageBucket, messagingSenderId, appId) — index.html mein firebaseConfig mein paste karo
-   (PASTE_YOUR_API_KEY wali jagah — "TODO (SETUP.txt)" likha hai wahan)
-8. Realtime Database → Rules → ye paste karo → Publish:
+TUMHARA KAAM (gloria-bite project mein — naya project NAHI banana)
+--------------------------------------------------------------------
+Firebase Console — gloria-bite project: https://console.firebase.google.com/project/gloria-bite/overview
+
+1. Build → Realtime Database → Create database → Locked mode → Start
+   (URL ye banega: https://gloria-bite-default-rtdb.firebaseio.com — config mein pehle se hai)
+2. Build → Storage → Get started → Start in production mode
+3. Build → Authentication → Users → Add user → Aliyan ka admin email + password banao
+   (Gloria Bite ke admin se ALAG email use karo — ye login sirf Aliyan ko do)
+4. Realtime Database → Rules → ye paste karo → Publish:
    {"rules":{"products":{".read":true,".write":"auth != null"}}}
-9. Storage → Rules → ye paste karo → Publish:
+5. Storage → Rules → ye paste karo → Publish:
    rules_version = '2';
    service firebase.storage {
      match /b/{bucket}/o {
@@ -39,8 +33,15 @@ FIREBASE SETUP (Sajeel — tum ne kaha tum banaoge)
      }
    }
    (Ye rules Admin Panel mein bhi likhe hain — wahan se copy kar sakte ho.)
-10. Deploy: hosting tool se upload karo (saari files — index.html + balloon-1..14.jpg),
-    naam: aliyan-balloons  →  link: https://sajeel-aliyan-balloons.vercel.app/
+6. ⚠️ API KEY CHECK (zaroori): Google Cloud Console → APIs & Services → Credentials
+   → gloria-bite wali key kholo → agar "HTTP referrers" restriction lagi hui hai
+   to us mein balloon site ka domain bhi add karo:
+     sajeel-aliyan-balloons.vercel.app/*
+   (Sirf gloria-bite.vercel.app/* hoga to balloon site ki Firebase calls block ho jayengi.
+   Agar koi restriction nahi lagi to kuch nahi karna.)
+7. Deploy: hosting tool se upload karo (saari files — index.html + balloon-1..14.jpg),
+   naam: aliyan-balloons  →  link: https://sajeel-aliyan-balloons.vercel.app/
+   (Repo sajeel-mods-bot mein v2 pehle se push hai — commit 2a70fec7.)
 
 TEST KARO (deploy ke baad)
 --------------------------
@@ -54,10 +55,11 @@ TEST KARO (deploy ke baad)
 
 AGAR KUCH NA CHALE
 ------------------
-- "Firebase setup nahi hua" → index.html mein firebaseConfig paste nahi hua (step 7).
-- Photo upload fail → Storage Rules publish nahi hue (step 9) ya Storage on nahi (step 6).
-- Login fail → Authentication mein user nahi bana (step 4) ya Email/Password off hai (step 3).
-- Products add nahi ho rahe → RTDB Rules publish nahi hue (step 8).
+- "Firebase setup nahi hua" → page purana ho sakta hai — nayi wali index.html deploy karo.
+- Photo upload fail → Storage Rules publish nahi hue (step 5) ya Storage on nahi (step 2).
+- Login fail → Authentication mein Aliyan ka user nahi bana (step 3) ya Email/Password off hai.
+- Products add nahi ho rahe → RTDB Rules publish nahi hue (step 4) ya RTDB bana hi nahi (step 1).
+- "API key not valid" ya Firebase bilkul connect nahi ho raha → step 6 (referrer) check karo.
 - Rules publish karne ke baad page refresh karo.
 
 NOTE
@@ -65,4 +67,6 @@ NOTE
 - balloon-1.jpg par Dreamstime watermark hai — Aliyan ko bolo apni saaf photo se replace kare
   (Admin Panel se us product ko delete kar ke nayi photo ke saath dobara add kar de).
 - Agar saare products delete kar do ge to demo wale 14 phir dikhne lagenge (fallback).
-- Admin login sirf ek hai (Aliyan) — password kisi ko mat do.
+- Admin login sirf Aliyan ka hai — password kisi ko mat do. Gloria Bite ka admin bhi
+  technically products likh sakta hai (rules: koi bhi logged-in user) — Aliyan ko alag
+  email do aur Gloria Bite ka admin password Aliyan ko mat do.

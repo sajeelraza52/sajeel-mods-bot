@@ -20,10 +20,11 @@ CLIENT SE POOCH KE BADALNA HAI
 4. SHOP NAAM: agar "Aliyan Balloons" ki jagah kuch aur naam ho to batao — main badal dunga
    (header, hero, title, footer — 4 jagah).
 
-FIREBASE CONFIG (zaroori — upload tabhi chalega)
---------------------------------------------------
-index.html mein "PASTE_YOUR_API_KEY" search karo — wahan apna Firebase config paste karo.
-Steps SETUP.txt mein hain (project banao → Auth user → RTDB + Storage → Rules publish → deploy).
+FIREBASE CONFIG (pehle se daal di — Gloria Bite wala project)
+-----------------------------------------------------------------
+index.html mein gloria-bite project ki config pehle se hai — paste karne ki zaroorat nahi.
+Bas SETUP.txt ke steps karo (gloria-bite project mein RTDB + Storage banao, Aliyan ka
+Auth user banao, rules publish karo, API key referrer check karo).
 
 DEPLOY
 ------

@@ -12,6 +12,26 @@ import os, shutil, re
 SRC_DIR = os.path.expanduser('~/workspace/balloon-shop-demo')
 DST_DIR = os.path.expanduser('~/workspace/balloon-shop-v2')
 
+# ---------- Gloria Bite Firebase (Sajeel: use the gloria-bite project) ----------
+# Config is read from the live Gloria Bite v3 file (96,197 bytes, byte-identical to the
+# repo) so the API key never passes through chat. Gloria Bite itself uses Firestore +
+# Auth only — no RTDB, no Storage — so the balloon shop's RTDB `products` + Storage
+# `products/` cannot collide with it. RTDB + Storage must still be created in that
+# project (SETUP.txt) — the databaseURL below is the deterministic one for it.
+import re, json
+GLORIA_HTML = os.path.expanduser('~/workspace/gloria-bite/index.html')
+with open(GLORIA_HTML, encoding='utf-8') as f:
+    gloria = f.read()
+_gm = re.search(r'const firebaseConfig = \{(.*?)\};', gloria, re.S)
+assert _gm, 'gloria-bite firebaseConfig not found'
+_gpairs = re.findall(r'(\w+):\s*"([^"]*)"', _gm.group(1))
+GLORIA_CFG = dict(_gpairs)
+assert GLORIA_CFG.get('projectId') == 'gloria-bite', f"unexpected projectId {GLORIA_CFG.get('projectId')}"
+assert GLORIA_CFG['apiKey'].startswith('AIza') and len(GLORIA_CFG['apiKey']) == 39, 'bad gloria-bite apiKey'
+GLORIA_CFG['databaseURL'] = 'https://gloria-bite-default-rtdb.firebaseio.com'
+_cfg_order = ['apiKey', 'authDomain', 'databaseURL', 'projectId', 'storageBucket', 'messagingSenderId', 'appId', 'measurementId']
+GLORIA_CFG_JS = '{\n' + ',\n'.join(f'  {k}: {json.dumps(GLORIA_CFG[k])}' for k in _cfg_order if k in GLORIA_CFG) + '\n}'
+
 with open(os.path.join(SRC_DIR, 'index.html'), encoding='utf-8') as f:
     html = f.read()
 
@@ -166,16 +186,9 @@ NEW_SCRIPT = '''<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase
 <script>
 // ===== Aliyan Balloons v2 — Firebase products + Admin =====
 var SHOP_WA = '923470098911';
-// TODO (SETUP.txt): Firebase project banao aur yahan apna config paste karo.
-var firebaseConfig = {
-  apiKey: "PASTE_YOUR_API_KEY",
-  authDomain: "PASTE_YOUR_PROJECT.firebaseapp.com",
-  databaseURL: "https://PASTE_YOUR_PROJECT-default-rtdb.firebaseio.com",
-  projectId: "PASTE_YOUR_PROJECT",
-  storageBucket: "PASTE_YOUR_PROJECT.appspot.com",
-  messagingSenderId: "PASTE_YOUR_SENDER_ID",
-  appId: "PASTE_YOUR_APP_ID"
-};
+// Firebase: Gloria Bite wala project (gloria-bite) — RTDB + Storage is project mein
+// banao (SETUP.txt). Config gloria-bite v3 file se li gayi hai.
+var firebaseConfig = __GLORIA_CFG__;
 var FIREBASE_ON = !!(firebaseConfig.apiKey && firebaseConfig.apiKey.indexOf('PASTE') !== 0);
 
 var CATS = { birthday: 'Birthday', cartoon: 'Cartoon', helium: 'Helium', bouquet: 'Bouquet', decor: 'Decor' };
@@ -491,8 +504,9 @@ document.getElementById('pPhoto').addEventListener('change', function (e) {
 
 s_start = html.index('<script>\n(function () {')
 s_end = html.index('</script>', s_start) + len('</script>')
+NEW_SCRIPT = NEW_SCRIPT.replace('__GLORIA_CFG__', GLORIA_CFG_JS)
 html = html[:s_start] + NEW_SCRIPT + html[s_end:]
-edits.append('firebase sdk + new script')
+edits.append('firebase sdk + new script (gloria-bite config)')
 
 # ---------- write out ----------
 os.makedirs(DST_DIR, exist_ok=True)
